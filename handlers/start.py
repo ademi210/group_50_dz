@@ -14,7 +14,8 @@ async def start_handler(message: types.Message):
         [
             InlineKeyboardButton(text="о нас", callback_data="aboutus"),
             InlineKeyboardButton(text="контакты", callback_data="contacts"),
-        ]
+            InlineKeyboardButton(text="оставить отзыв", callback_data="review"),
+        ],
     ])
     await message.answer(
         f'Привет,{user.first_name}! Вас приветствует официальный бот сети пиццерий "Додо пицца", выберите интересующий ваш сервис', reply_markup=kb)
