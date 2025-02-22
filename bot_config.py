@@ -1,11 +1,13 @@
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
-from dotenv import dotenv_values
 from aiogram import Bot, Dispatcher
 from database import Database
+from decouple import config
 
 
-token = dotenv_values(".env")['TOKEN']
+
+token = config('TOKEN')
 bot = Bot(token=token)
 storage = MemoryStorage()
 database = Database("database.sqlite3")
 dp = Dispatcher(bot, storage=storage)
+ADMINS = [6725727530, ]

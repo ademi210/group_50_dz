@@ -15,7 +15,7 @@ class Database:
                     phone_number TEXT,
                     text TEXT,
                     rate INTEGER
-                )        
+                )
             """)
             conn.commit()
 
@@ -30,5 +30,6 @@ class Database:
                 (data["name"], data["phone_number"], data["text"], data["rate"]),
             )
             conn.commit()
+
 
 

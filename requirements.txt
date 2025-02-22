@@ -12,6 +12,7 @@ idna==3.10
 magic-filter==1.0.12
 multidict==6.1.0
 propcache==0.2.1
+python-decouple==3.8
 python-dotenv==1.0.1
 pytz==2025.1
 typing_extensions==4.12.2

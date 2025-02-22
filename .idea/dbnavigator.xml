@@ -16,7 +16,7 @@
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="dca5341b-f873-4627-a8f9-16ff6fbf06c1">
+    <connection id="a31a595f-d336-497c-bde5-70cf044c2969">
       <console name="Connection" type="STANDARD" schema="" session="Main" />
     </connection>
   </component>
@@ -24,13 +24,31 @@
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="a31a595f-d336-497c-bde5-70cf044c2969" object-ref="schemas/main/tables/products_details" />
+      <object connection-id="a31a595f-d336-497c-bde5-70cf044c2969" object-ref="schemas/main/tables/store" />
+      <object connection-id="a31a595f-d336-497c-bde5-70cf044c2969" object-ref="schemas/main/tables/sqlite_sequence" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="dca5341b-f873-4627-a8f9-16ff6fbf06c1" />
+    <connection id="a31a595f-d336-497c-bde5-70cf044c2969" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="dca5341b-f873-4627-a8f9-16ff6fbf06c1" dataset="main.claim" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="a31a595f-d336-497c-bde5-70cf044c2969" dataset="main.products_details" active-filter-id="4667ad3f-5278-431e-8d9b-63b8e9f5e699">
+      <filter id="4667ad3f-5278-431e-8d9b-63b8e9f5e699" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
+    <filter-actions connection-id="a31a595f-d336-497c-bde5-70cf044c2969" dataset="main.sqlite_sequence" active-filter-id="a5f5c8d8-c05f-4e07-bee7-cdf75afdae17">
+      <filter id="a5f5c8d8-c05f-4e07-bee7-cdf75afdae17" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="name" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
+    <filter-actions connection-id="a31a595f-d336-497c-bde5-70cf044c2969" dataset="main.store" active-filter-id="2976e16d-3113-471d-aa29-810439e504d7">
+      <filter id="2976e16d-3113-471d-aa29-810439e504d7" name="Filter" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
@@ -49,7 +67,7 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="dca5341b-f873-4627-a8f9-16ff6fbf06c1" active="true" signed="true">
+      <connection id="a31a595f-d336-497c-bde5-70cf044c2969" active="true" signed="true">
         <database>
           <name value="Connection" />
           <description value="" />
@@ -60,7 +78,7 @@
           <driver-library value="" />
           <driver value="" />
           <url-type value="CUSTOM" />
-          <url value="jdbc:sqlite:/Users/ademi/TeleBot/database.sqlite3" />
+          <url value="jdbc:sqlite:/Users/ademi/TeleBot/db/store.sqlite3" />
           <type value="NONE" />
           <user value="" />
           <deprecated-pwd value="" />
