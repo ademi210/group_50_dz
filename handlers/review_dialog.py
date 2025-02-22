@@ -1,7 +1,10 @@
 from aiogram import Dispatcher
 from aiogram.types import Message, CallbackQuery
+from aiogram.dispatcher.filters import Text
 from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters.state import StatesGroup, State
+from bot_config import database
+
 
 
 reviewed_users = set()
@@ -23,6 +26,12 @@ async def start_dialog(callback: CallbackQuery):
     await RestourantReview.name.set()
     await callback.message.answer('как вас зовут?')
 
+
+async def stop_dialog(message: Message, state:FSMContext):
+    await state.finish()
+    await message.answer('спасибо за потраченное время')
+
+
 async def process_name(message: Message, state: FSMContext):
     name = message.text
     async with state.proxy() as data:
@@ -43,12 +52,20 @@ async def process_text(message: Message, state:FSMContext):
     await message.answer('поставьте оценку от 1 до 5')
 
 async def process_rate(message: Message, state:FSMContext):
+    rate = message.text
+    if not rate.isdigit():
+        await message.answer('введите число')
+        return
+    rate = int(rate)
+    if rate < 1 or rate > 5:
+        await message.answer('неверное число')
+        return
     async with state.proxy() as data:
-        data['rate'] = message.text
-    await state.finish()
+        data['rate'] = rate
+    data = await state.get_data()
+    database.add_claim(data)
     await message.answer('спасибо за отзыв')
-
-
+    await state.finish()
 
 
 def register_handlers(dp: Dispatcher):
@@ -57,4 +74,3 @@ def register_handlers(dp: Dispatcher):
     dp.register_message_handler(process_phone_number, state=RestourantReview.phone_number)
     dp.register_message_handler(process_text, state=RestourantReview.text)
     dp.register_message_handler(process_rate, state=RestourantReview.rate)
-

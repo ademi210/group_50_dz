@@ -16,15 +16,17 @@ async def start_handler(message: types.Message):
             InlineKeyboardButton(text="контакты", callback_data="contacts"),
             InlineKeyboardButton(text="оставить отзыв", callback_data="review"),
         ],
+
     ])
     await message.answer(
         f'Привет,{user.first_name}! Вас приветствует официальный бот сети пиццерий "Додо пицца", выберите интересующий ваш сервис', reply_markup=kb)
 
 async def about_us_handler(callback: CallbackQuery):
-    await callback.message.answer("Додо Пицца — российская сеть пиццерий, основанная в 2011 году. Компания специализируется на быстром и качественном обслуживании, а также предлагает пиццу на любой вкус с возможностью индивидуальной настройки заказа.")
+    await callback.message.answer(f"Додо Пицца — российская сеть пиццерий, основанная в 2011 году. Компания специализируется на быстром и качественном обслуживании, а также предлагает пиццу на любой вкус с возможностью индивидуальной настройки заказа.")
+
 
 async def contact_handler(callback: CallbackQuery):
-    await callback.message.answer("наш адрес:\nчуйский переулок 32Б\nномер телефона: 0709550550 ")
+    await callback.message.answer(f"наш адрес:\nчуйский переулок 32Б\nномер телефона: 0709550550 ")
 
 
 
