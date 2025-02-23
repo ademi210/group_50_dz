@@ -87,6 +87,7 @@ async def load_photo(message: types.Message, state: FSMContext):
 async def submit_load(message: types.Message, state: FSMContext):
     if message.text == 'да':
         async with state.proxy() as data:
+
             await bot_db.sql_insert_store(
                 name_product=data['name_product'],
                 size=data['size'],
@@ -94,6 +95,7 @@ async def submit_load(message: types.Message, state: FSMContext):
                 product_id=data['product_id'],
                 photo=data['photo']
             )
+
             await bot_db.sql_insert_products_details(
                 product_id=data['product_id'],
                 category=data['category'],

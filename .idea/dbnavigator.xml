@@ -24,11 +24,7 @@
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="a31a595f-d336-497c-bde5-70cf044c2969" object-ref="schemas/main/tables/products_details" />
-      <object connection-id="a31a595f-d336-497c-bde5-70cf044c2969" object-ref="schemas/main/tables/store" />
-      <object connection-id="a31a595f-d336-497c-bde5-70cf044c2969" object-ref="schemas/main/tables/sqlite_sequence" />
-    </open-files>
+    <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="a31a595f-d336-497c-bde5-70cf044c2969" />
