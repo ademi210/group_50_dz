@@ -10,4 +10,4 @@ bot = Bot(token=token)
 storage = MemoryStorage()
 database = Database("database.sqlite3")
 dp = Dispatcher(bot, storage=storage)
-ADMINS = [6725727530, ]
+ADMINS = [6469468347, ]

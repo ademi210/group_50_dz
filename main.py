@@ -4,13 +4,16 @@ from bot_config import dp, ADMINS, bot, database
 from handlers import (start, other_message,info,
                       review_dialog, store_fsm)
 
-from db.bot_db import  create_tables
+from db.bot_db import create_tables
+
 
 
 async def on_startup(_):
     for admin in ADMINS:
         await bot.send_message(chat_id=admin,
                                text='Бот включен!')
+
+
     await create_tables()
 
 

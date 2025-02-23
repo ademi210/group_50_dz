@@ -5,6 +5,7 @@ from aiogram.dispatcher import FSMContext
 from db import bot_db
 
 
+
 class StoreFSM(StatesGroup):
     name_product = State()
     category = State()

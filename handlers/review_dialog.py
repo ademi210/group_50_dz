@@ -9,6 +9,7 @@ from bot_config import database
 
 reviewed_users = set()
 
+
 class RestourantReview(StatesGroup):
     name = State()
     phone_number = State()
