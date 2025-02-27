@@ -16,8 +16,8 @@
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="a31a595f-d336-497c-bde5-70cf044c2969">
-      <console name="Connection" type="STANDARD" schema="" session="Main" />
+    <connection id="fd62a9aa-3997-4d7d-8dd5-41ec80627d99">
+      <console name="Connection" type="STANDARD" schema="" session="Main"><![CDATA[SELECT * FROM main.store;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -27,21 +27,11 @@
     <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
-    <connection id="a31a595f-d336-497c-bde5-70cf044c2969" />
+    <connection id="fd62a9aa-3997-4d7d-8dd5-41ec80627d99" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="a31a595f-d336-497c-bde5-70cf044c2969" dataset="main.products_details" active-filter-id="4667ad3f-5278-431e-8d9b-63b8e9f5e699">
-      <filter id="4667ad3f-5278-431e-8d9b-63b8e9f5e699" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
-        <condition column="id" operator="=" value="" active="true" />
-      </filter>
-    </filter-actions>
-    <filter-actions connection-id="a31a595f-d336-497c-bde5-70cf044c2969" dataset="main.sqlite_sequence" active-filter-id="a5f5c8d8-c05f-4e07-bee7-cdf75afdae17">
-      <filter id="a5f5c8d8-c05f-4e07-bee7-cdf75afdae17" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
-        <condition column="name" operator="=" value="" active="true" />
-      </filter>
-    </filter-actions>
-    <filter-actions connection-id="a31a595f-d336-497c-bde5-70cf044c2969" dataset="main.store" active-filter-id="2976e16d-3113-471d-aa29-810439e504d7">
-      <filter id="2976e16d-3113-471d-aa29-810439e504d7" name="Filter" temporary="false" custom-name="false" type="basic" join-type="AND">
+    <filter-actions connection-id="fd62a9aa-3997-4d7d-8dd5-41ec80627d99" dataset="main.store" active-filter-id="5c73debc-3983-4839-a402-9a33e7a81ed6">
+      <filter id="5c73debc-3983-4839-a402-9a33e7a81ed6" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
         <condition column="id" operator="=" value="" active="true" />
       </filter>
     </filter-actions>
@@ -63,7 +53,7 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="a31a595f-d336-497c-bde5-70cf044c2969" active="true" signed="true">
+      <connection id="fd62a9aa-3997-4d7d-8dd5-41ec80627d99" active="true" signed="true">
         <database>
           <name value="Connection" />
           <description value="" />

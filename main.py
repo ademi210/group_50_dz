@@ -1,22 +1,17 @@
 import logging
 from aiogram import executor
-from bot_config import dp, ADMINS, bot, database
+from bot_config import dp, ADMINS, bot
 from handlers import (start, other_message,info,
-                      review_dialog, store_fsm)
+                      review_dialog, store_fsm, send_products)
 
 from db.bot_db import create_tables
-
-
 
 async def on_startup(_):
     for admin in ADMINS:
         await bot.send_message(chat_id=admin,
-                               text='Бот включен!')
+                               text='Бот включен')
 
-
-    await create_tables()
-
-
+        await create_tables()
 
 async def on_shutdown(_):
     for admin in ADMINS:
@@ -27,8 +22,9 @@ start.register_handlers(dp)
 review_dialog.register_handlers(dp)
 store_fsm.register_handlers(dp)
 info.register_handlers(dp)
+send_products.register_handlers(dp)
 other_message.register_handlers(dp)
-database.create_tables()
+# database.create_tables()
 
 
 

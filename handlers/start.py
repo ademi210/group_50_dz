@@ -12,7 +12,7 @@ async def start_handler(message: types.Message):
         ],
 
         [
-            InlineKeyboardButton(text="о нас", callback_data="aboutus"),
+            InlineKeyboardButton(text="о нас", callback_data="abouts"),
             InlineKeyboardButton(text="контакты", callback_data="contacts"),
             InlineKeyboardButton(text="оставить отзыв", callback_data="review"),
         ],
@@ -32,5 +32,5 @@ async def contact_handler(callback: CallbackQuery):
 
 def register_handlers(dp: Dispatcher):
     dp.register_message_handler(start_handler, commands=["start"])
-    dp.register_callback_query_handler(about_us_handler, lambda c: c.data == "aboutus")
+    dp.register_callback_query_handler(about_us_handler, lambda c: c.data == "abouts")
     dp.register_callback_query_handler(contact_handler,lambda c: c.data == "contacts")
