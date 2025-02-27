@@ -22,7 +22,6 @@ async def send_all_products(call: types.CallbackQuery):
         for product in products:
 
             caption = (f'Название товара - {product["name_product"]}\n'
-                       f'Категория - {product["category"]}\n'
                        f'Размер - {product["size"]}\n'
                        f'Цена - {product["price"]}\n'
                        f'коллекция - {product["collection"]}')

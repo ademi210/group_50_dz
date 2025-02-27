@@ -1,10 +1,11 @@
 import logging
 from aiogram import executor
-from bot_config import dp, ADMINS, bot
+from bot_config import dp, ADMINS, bot, database
 from handlers import (start, other_message,info,
-                      review_dialog, store_fsm, send_products)
+                      review_dialog, store_fsm, send_products, edit_products)
 
 from db.bot_db import create_tables
+
 
 async def on_startup(_):
     for admin in ADMINS:
@@ -23,8 +24,9 @@ review_dialog.register_handlers(dp)
 store_fsm.register_handlers(dp)
 info.register_handlers(dp)
 send_products.register_handlers(dp)
+edit_products.register_handlers(dp)
 other_message.register_handlers(dp)
-# database.create_tables()
+database.create_tables()
 
 
 

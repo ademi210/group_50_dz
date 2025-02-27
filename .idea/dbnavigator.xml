@@ -19,6 +19,9 @@
     <connection id="fd62a9aa-3997-4d7d-8dd5-41ec80627d99">
       <console name="Connection" type="STANDARD" schema="" session="Main"><![CDATA[SELECT * FROM main.store;]]></console>
     </connection>
+    <connection id="0a603ac0-1121-4420-81c4-62fade5a8286">
+      <console name="Connection 1" type="STANDARD" schema="" session="Main" />
+    </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
     <last-used-providers />
@@ -28,10 +31,36 @@
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="fd62a9aa-3997-4d7d-8dd5-41ec80627d99" />
+    <connection id="0a603ac0-1121-4420-81c4-62fade5a8286" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="0a603ac0-1121-4420-81c4-62fade5a8286" dataset="main.claim" active-filter-id="c6e99661-7be3-45c8-af91-c9a31eaf8bee">
+      <filter id="c6e99661-7be3-45c8-af91-c9a31eaf8bee" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
+    <filter-actions connection-id="0a603ac0-1121-4420-81c4-62fade5a8286" dataset="main.store" active-filter-id="1ada8f12-b970-4532-af6e-ca7265cb1316">
+      <filter id="1ada8f12-b970-4532-af6e-ca7265cb1316" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
+    <filter-actions connection-id="fd62a9aa-3997-4d7d-8dd5-41ec80627d99" dataset="main.products_details" active-filter-id="7671a922-e8a1-46fc-a1dd-7b6fffe4ab84">
+      <filter id="7671a922-e8a1-46fc-a1dd-7b6fffe4ab84" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
+    <filter-actions connection-id="fd62a9aa-3997-4d7d-8dd5-41ec80627d99" dataset="main.sqlite_sequence" active-filter-id="d112f5b3-6689-4280-940f-9471d5ae5823">
+      <filter id="d112f5b3-6689-4280-940f-9471d5ae5823" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="name" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
     <filter-actions connection-id="fd62a9aa-3997-4d7d-8dd5-41ec80627d99" dataset="main.store" active-filter-id="5c73debc-3983-4839-a402-9a33e7a81ed6">
-      <filter id="5c73debc-3983-4839-a402-9a33e7a81ed6" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+      <filter id="5c73debc-3983-4839-a402-9a33e7a81ed6" name="Filter" temporary="false" custom-name="false" type="basic" join-type="OR">
+        <condition column="id" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
+    <filter-actions connection-id="fd62a9aa-3997-4d7d-8dd5-41ec80627d99" dataset="main.collection_products" active-filter-id="845a5f5d-4b60-4c8d-baf1-3f44031bd5e8">
+      <filter id="845a5f5d-4b60-4c8d-baf1-3f44031bd5e8" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
         <condition column="id" operator="=" value="" active="true" />
       </filter>
     </filter-actions>
@@ -65,6 +94,96 @@
           <driver value="" />
           <url-type value="CUSTOM" />
           <url value="jdbc:sqlite:/Users/ademi/TeleBot/db/store.sqlite3" />
+          <type value="NONE" />
+          <user value="" />
+          <deprecated-pwd value="" />
+        </database>
+        <properties>
+          <auto-commit value="false" />
+        </properties>
+        <ssh-settings>
+          <active value="false" />
+          <proxy-host value="" />
+          <proxy-port value="22" />
+          <proxy-user value="" />
+          <deprecated-proxy-pwd value="" />
+          <auth-type value="PASSWORD" />
+          <key-file value="" />
+          <key-passphrase value="" />
+        </ssh-settings>
+        <ssl-settings>
+          <active value="false" />
+          <certificate-authority-file value="" />
+          <client-certificate-file value="" />
+          <client-key-file value="" />
+        </ssl-settings>
+        <details>
+          <charset value="UTF-8" />
+          <session-management value="true" />
+          <ddl-file-binding value="true" />
+          <database-logging value="true" />
+          <connect-automatically value="true" />
+          <restore-workspace value="true" />
+          <restore-workspace-deep value="false" />
+          <environment-type value="default" />
+          <connectivity-timeout value="30" />
+          <idle-time-to-disconnect value="30" />
+          <idle-time-to-disconnect-pool value="5" />
+          <credential-expiry-time value="10" />
+          <max-connection-pool-size value="7" />
+          <alternative-statement-delimiter value="" />
+        </details>
+        <debugger>
+          <compile-dependencies value="true" />
+          <tcp-driver-tunneling value="false" />
+          <tcp-host-address value="" />
+          <tcp-port-from value="4000" />
+          <tcp-port-to value="4999" />
+          <debugger-type value="JDBC" />
+        </debugger>
+        <object-filters hide-empty-schemas="false" hide-pseudo-columns="false" hide-audit-columns="false">
+          <object-filters />
+          <object-type-filter use-master-settings="true">
+            <object-type name="SCHEMA" enabled="true" />
+            <object-type name="USER" enabled="true" />
+            <object-type name="ROLE" enabled="true" />
+            <object-type name="PRIVILEGE" enabled="true" />
+            <object-type name="CHARSET" enabled="true" />
+            <object-type name="TABLE" enabled="true" />
+            <object-type name="VIEW" enabled="true" />
+            <object-type name="MATERIALIZED_VIEW" enabled="true" />
+            <object-type name="NESTED_TABLE" enabled="true" />
+            <object-type name="COLUMN" enabled="true" />
+            <object-type name="INDEX" enabled="true" />
+            <object-type name="CONSTRAINT" enabled="true" />
+            <object-type name="DATASET_TRIGGER" enabled="true" />
+            <object-type name="DATABASE_TRIGGER" enabled="true" />
+            <object-type name="SYNONYM" enabled="true" />
+            <object-type name="SEQUENCE" enabled="true" />
+            <object-type name="PROCEDURE" enabled="true" />
+            <object-type name="FUNCTION" enabled="true" />
+            <object-type name="PACKAGE" enabled="true" />
+            <object-type name="TYPE" enabled="true" />
+            <object-type name="TYPE_ATTRIBUTE" enabled="true" />
+            <object-type name="ARGUMENT" enabled="true" />
+            <object-type name="DIMENSION" enabled="true" />
+            <object-type name="CLUSTER" enabled="true" />
+            <object-type name="DBLINK" enabled="true" />
+          </object-type-filter>
+        </object-filters>
+      </connection>
+      <connection id="0a603ac0-1121-4420-81c4-62fade5a8286" active="true" signed="true">
+        <database>
+          <name value="Connection 1" />
+          <description value="" />
+          <database-type value="SQLITE" />
+          <config-type value="BASIC" />
+          <database-version value="3.45" />
+          <driver-source value="BUNDLED" />
+          <driver-library value="" />
+          <driver value="" />
+          <url-type value="CUSTOM" />
+          <url value="jdbc:sqlite:/Users/ademi/TeleBot/database.sqlite3" />
           <type value="NONE" />
           <user value="" />
           <deprecated-pwd value="" />

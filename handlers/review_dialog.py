@@ -1,9 +1,9 @@
 from aiogram import Dispatcher
 from aiogram.types import Message, CallbackQuery
-from aiogram.dispatcher.filters import Text
+# from aiogram.dispatcher.filters import Text
 from aiogram.dispatcher import FSMContext
 from aiogram.dispatcher.filters.state import StatesGroup, State
-# from bot_config import database
+from bot_config import database
 
 
 
@@ -64,7 +64,7 @@ async def process_rate(message: Message, state:FSMContext):
     async with state.proxy() as data:
         data['rate'] = rate
     data = await state.get_data()
-    # database.add_claim(data)
+    database.add_claim(data)
     await message.answer('спасибо за отзыв')
     await state.finish()
 

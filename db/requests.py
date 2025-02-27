@@ -23,10 +23,10 @@ CREATE_TABLE_collection_products = """
     CREATE TABLE IF NOT EXISTS collection_products(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     product_id TEXT,
-    collection TEXT
+    collection TEXT,
+    FOREIGN KEY (product_id) REFERENCES store (product_id) ON DELETE CASCADE
     )
 """
-
 
 
 INSERT_store_query = """
